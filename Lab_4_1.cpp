@@ -16,7 +16,7 @@ int main() {
         cout << "Введите число K: ";
         cin >> K;
 
-        if (cin.fail() || K < 0) {
+        if (cin.fail() || K < 0 || cin.peek() != '\n') {
             cout << "Пожалуйста, введите целое положительное число." << endl;
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Очистка ввода
